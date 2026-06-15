@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesuit Cheer Social Media Calendar 2026-2027</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .grid-post-color {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .story-color {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .month-container {
+            margin-bottom: 60px;
+            page-break-inside: avoid;
+        }
+
+        .month-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px 12px 0 0;
+            font-size: 2em;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            border: 2px solid #667eea;
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .day-header {
+            background: #f8f9fa;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #495057;
+            border-bottom: 2px solid #dee2e6;
+            border-right: 1px solid #dee2e6;
+        }
+
+        .day-header:last-child {
+            border-right: none;
+        }
+
+        .calendar-day {
+            min-height: 150px;
+            padding: 8px;
+            border-right: 1px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+            background: white;
+            position: relative;
+        }
+
+        .calendar-day:nth-child(7n) {
+            border-right: none;
+        }
+
+        .calendar-day.empty {
+            background: #f8f9fa;
+        }
+
+        .date-number {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #495057;
+            margin-bottom: 6px;
+        }
+
+        .post-badge {
+            font-size: 0.68em;
+            padding: 5px 8px;
+            border-radius: 6px;
+            margin-bottom: 5px;
+            display: block;
+            color: white;
+            font-weight: 600;
+            line-height: 1.4;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+
+        .post-badge:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+
+        .post-title {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .post-detail {
+            font-size: 0.9em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .grid-post {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .story {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .post-emoji {
+            margin-right: 3px;
+        }
+
+        .today {
+            background: #fff3cd;
+            box-shadow: inset 0 0 0 2px #ffc107;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+
+            .month-container {
+                page-break-after: always;
+            }
+
+            .post-badge:hover {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .calendar-day {
+                min-height: 100px;
+                padding: 6px;
+            }
+
+            .post-badge {
+                font-size: 0.65em;
+                padding: 3px 6px;
+            }
+
+            .date-number {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .month-header {
+                font-size: 1.5em;
+                padding: 15px;
+            }
+
+            .calendar-day {
+                min-height: 80px;
+                padding: 4px;
+            }
+
+            .post-badge {
+                font-size: 0.6em;
+                padding: 2px 4px;
+                margin-bottom: 2px;
+            }
+
+            .date-number {
+                font-size: 0.9em;
+                margin-bottom: 4px;
+            }
+
+            .day-header {
+                padding: 10px 5px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Jesuit Cheer Social Media Calendar</h1>
+        <div class="subtitle">2026-2027 Season | Instagram Content Plan</div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color grid-post-color"></div>
+                <span>Grid Post (Feed)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color story-color"></div>
+                <span>Story</span>
+            </div>
+        </div>
+
+        <!-- JUNE 2026 -->
+        <div class="month-container">
+            <div class="month-header">June 2026</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day"><div class="date-number">1</div></div>
+                <div class="calendar-day"><div class="date-number">2</div></div>
+                <div class="calendar-day"><div class="date-number">3</div></div>
+                <div class="calendar-day"><div class="date-number">4</div></div>
+                <div class="calendar-day"><div class="date-number">5</div></div>
+                <div class="calendar-day"><div class="date-number">6</div></div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date-number">7</div></div>
+                <div class="calendar-day"><div class="date-number">8</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">9</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Meredith Garcia - Story post</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Dylan Hernandez - Grid post</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Siever McCullough - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">10</div></div>
+                <div class="calendar-day"><div class="date-number">11</div></div>
+                <div class="calendar-day"><div class="date-number">12</div></div>
+                <div class="calendar-day"><div class="date-number">13</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day"><div class="date-number">15</div></div>
+                <div class="calendar-day"><div class="date-number">16</div></div>
+                <div class="calendar-day"><div class="date-number">17</div></div>
+                <div class="calendar-day"><div class="date-number">18</div></div>
+                <div class="calendar-day"><div class="date-number">19</div></div>
+                <div class="calendar-day"><div class="date-number">20</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">21</div></div>
+                <div class="calendar-day"><div class="date-number">22</div></div>
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">24</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Cate OBrien - Happy Birthday!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">25</div></div>
+                <div class="calendar-day"><div class="date-number">26</div></div>
+                <div class="calendar-day"><div class="date-number">27</div></div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">28</div></div>
+                <div class="calendar-day"><div class="date-number">29</div></div>
+                <div class="calendar-day"><div class="date-number">30</div></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- JULY 2026 -->
+        <div class="month-container">
+            <div class="month-header">July 2026</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day"><div class="date-number">1</div></div>
+                <div class="calendar-day"><div class="date-number">2</div></div>
+                <div class="calendar-day"><div class="date-number">3</div></div>
+                <div class="calendar-day"><div class="date-number">4</div></div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date-number">5</div></div>
+                <div class="calendar-day"><div class="date-number">6</div></div>
+                <div class="calendar-day"><div class="date-number">7</div></div>
+                <div class="calendar-day"><div class="date-number">8</div></div>
+                <div class="calendar-day"><div class="date-number">9</div></div>
+                <div class="calendar-day"><div class="date-number">10</div></div>
+                <div class="calendar-day"><div class="date-number">11</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">12</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">13</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Catherine LeClair - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day"><div class="date-number">15</div></div>
+                <div class="calendar-day"><div class="date-number">16</div></div>
+                <div class="calendar-day"><div class="date-number">17</div></div>
+                <div class="calendar-day"><div class="date-number">18</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">19</div></div>
+                <div class="calendar-day"><div class="date-number">20</div></div>
+                <div class="calendar-day"><div class="date-number">21</div></div>
+                <div class="calendar-day"><div class="date-number">22</div></div>
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day"><div class="date-number">24</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">25</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Ireland Burnett - Story</span></span>
+                </div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day">
+                    <div class="date-number">26</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Sofia Bailey - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">27</div></div>
+                <div class="calendar-day"><div class="date-number">28</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">29</div>
+                    <span class="post-badge grid-post"><span class="post-title">📸 Team Photos</span><span class="post-detail">Share team photos & BTS content</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">30</div>
+                    <span class="post-badge grid-post"><span class="post-title">🏕️ NCA Camp Kickoff</span><span class="post-detail">Cheer camp begins! #NCA #CheerCamp</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">31</div>
+                    <span class="post-badge story"><span class="post-title">🏕️ Camp Day 2</span><span class="post-detail">Highlights & activities from day 2</span></span>
+                </div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- AUGUST 2026 -->
+        <div class="month-container">
+            <div class="month-header">August 2026</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day">
+                    <div class="date-number">1</div>
+                    <span class="post-badge story"><span class="post-title">🏕️ Camp Day 3</span><span class="post-detail">Day 3 highlights & activities</span></span>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day">
+                    <div class="date-number">2</div>
+                    <span class="post-badge story"><span class="post-title">⭐ All American Tryouts</span><span class="post-detail">Good luck to our athletes! #AllAmerican</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">3</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">4</div>
+                    <span class="post-badge grid-post"><span class="post-title">⭐ All American Winners</span><span class="post-detail">Announce winners with highlights!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">5</div></div>
+                <div class="calendar-day"><div class="date-number">6</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">7</div>
+                    <span class="post-badge story"><span class="post-title">🎉 Coach Birthday</span><span class="post-detail">Happy Birthday Coach Rachel! 🎂</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">8</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">9</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">10</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Camila Burlingame - Story</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">11</div>
+                    <span class="post-badge grid-post"><span class="post-title">📸 Varsity Team Photos</span><span class="post-detail">Post Varsity team photo & announce captains!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">12</div>
+                    <span class="post-badge grid-post"><span class="post-title">📸 JV Team Photos</span><span class="post-detail">Post the JV team photo!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">13</div>
+                    <span class="post-badge story"><span class="post-title">📣 New Parent Welcome</span><span class="post-detail">Welcome Jesuit families! Buy HOCO shirts</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Kate Kruse - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">15</div>
+                    <span class="post-badge grid-post"><span class="post-title">👕 HOCO Shirts Open</span><span class="post-detail">NOW AVAILABLE! Link in bio. Close 9/11</span></span>
+                </div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">16</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">17</div>
+                    <span class="post-badge story"><span class="post-title">📚 Freshman Orientation</span><span class="post-detail">Welcome Freshman Rangers!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">18</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">19</div>
+                    <span class="post-badge grid-post"><span class="post-title">📚 First Day of School</span><span class="post-detail">Let's make it great! #BackToSchool</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">20</div>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Football Scrimmage</span><span class="post-detail">Rangers are ready! #RangerNation</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">21</div>
+                    <span class="post-badge story"><span class="post-title">👕 HOCO Shirt Reminder</span><span class="post-detail">Mum sales now open too!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">22</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Corinne Rodill - Story</span></span>
+                </div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day"><div class="date-number">24</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">25</div>
+                    <span class="post-badge story"><span class="post-title">🎨 Banner Painting</span><span class="post-detail">Game day prep in progress!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">26</div>
+                    <span class="post-badge story"><span class="post-title">👕 HOCO Shirt Reminder</span><span class="post-detail">Don't forget to order!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">27</div>
+                    <span class="post-badge story"><span class="post-title">🏈 JV Game</span><span class="post-detail">JV vs. Sachse tonight! Come support!</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 First Game Tomorrow!</span><span class="post-detail">Post with theme reveal</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">28</div>
+                    <span class="post-badge story"><span class="post-title">🏈 Varsity Away Game</span><span class="post-detail">@ Sachse - Show the theme!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">29</div></div>
+
+                <!-- Week 6 -->
+                <div class="calendar-day"><div class="date-number">30</div></div>
+                <div class="calendar-day"><div class="date-number">31</div></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- SEPTEMBER 2026 -->
+        <div class="month-container">
+            <div class="month-header">September 2026</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day">
+                    <div class="date-number">1</div>
+                    <span class="post-badge story"><span class="post-title">👕 HOCO Shirt Reminder</span><span class="post-detail">Last 10 days to order!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">2</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎀 Little Rowdy Rangers</span><span class="post-detail">Join us Friday night! #FridayNightLights</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">3</div>
+                    <span class="post-badge story"><span class="post-title">🏈 JV Game</span><span class="post-detail">JV vs. Rockwall tonight!</span></span>
+                    <span class="post-badge story"><span class="post-title">🏈 Home Game Reminder</span><span class="post-detail">First home game! Announce theme</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">4</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Piper Blanton - Story</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Varsity HOME Game</span><span class="post-detail">vs. Rockwall - Announce theme!</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Ellie Wilson - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">5</div></div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day">
+                    <div class="date-number">6</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Stella McAllister - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">7</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">8</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Emma Slovak - Story</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">9</div>
+                    <span class="post-badge story"><span class="post-title">👕 HOCO T-Shirt Reminder</span><span class="post-detail">Only 2 days left to order!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">10</div>
+                    <span class="post-badge story"><span class="post-title">🏈 JV Freshman Game</span><span class="post-detail">JV vs. Forney tonight!</span></span>
+                    <span class="post-badge story"><span class="post-title">🏈 Home Game Reminder</span><span class="post-detail">Tomorrow! Announce theme</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">11</div>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Varsity HOME Game</span><span class="post-detail">vs. Forney! #RangerPride</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">12</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">13</div></div>
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day"><div class="date-number">15</div></div>
+                <div class="calendar-day"><div class="date-number">16</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">17</div>
+                    <span class="post-badge story"><span class="post-title">🏈 JV Game</span><span class="post-detail">JV vs. Princeton tonight!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">18</div>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Varsity Away Game</span><span class="post-detail">@ Princeton! Road trip!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">19</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">20</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">21</div>
+                    <span class="post-badge story"><span class="post-title">👑 It's HOMECOMING WEEK!</span><span class="post-detail">Get ready Rangers!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">22</div></div>
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">24</div>
+                    <span class="post-badge story"><span class="post-title">👑 Ranger Day Practice</span><span class="post-detail">Clips from practice prep!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">25</div>
+                    <span class="post-badge grid-post"><span class="post-title">👑 HOMECOMING DAY!</span><span class="post-detail">Ranger Day + Game vs McKinney Boyd</span></span>
+                    <span class="post-badge story"><span class="post-title">Cheerleaders Arrive</span><span class="post-detail">Follow along all day!</span></span>
+                    <span class="post-badge story"><span class="post-title">Ranger Day Performance</span><span class="post-detail">Share performance clips!</span></span>
+                    <span class="post-badge story"><span class="post-title">Game Pre-game Updates</span><span class="post-detail">HOCO game excitement!</span></span>
+                    <span class="post-badge story"><span class="post-title">Halftime & Game Updates</span><span class="post-detail">Cheer performance clips</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">26</div>
+                    <span class="post-badge grid-post"><span class="post-title">👑 HOMECOMING RECAP</span><span class="post-detail">Photos & videos from HOCO!</span></span>
+                </div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">27</div></div>
+                <div class="calendar-day"><div class="date-number">28</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">29</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Caroline Klasing - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">30</div></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- OCTOBER 2026 -->
+        <div class="month-container">
+            <div class="month-header">October 2026</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day"><div class="date-number">1</div></div>
+                <div class="calendar-day"><div class="date-number">2</div></div>
+                <div class="calendar-day"><div class="date-number">3</div></div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date-number">4</div></div>
+                <div class="calendar-day"><div class="date-number">5</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">6</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Georgia Fossez - Story</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">7</div>
+                    <span class="post-badge story"><span class="post-title">🏈 JV Game</span><span class="post-detail">JV vs. Walnut Grove tonight!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">8</div>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Varsity Away Game</span><span class="post-detail">@ Walnut Grove! #RangerNation</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">9</div></div>
+                <div class="calendar-day"><div class="date-number">10</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">11</div></div>
+                <div class="calendar-day"><div class="date-number">12</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">13</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Yvette Williams - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">15</div>
+                    <span class="post-badge story"><span class="post-title">🏈 JV Freshman Game</span><span class="post-detail">JV vs. Prosper tonight!</span></span>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Giada Cervin - Story</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">16</div>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Varsity HOME Game</span><span class="post-detail">vs. Prosper! Announce theme</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">17</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">18</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">19</div>
+                    <span class="post-badge story"><span class="post-title">🎃 Trunk or Treat Info</span><span class="post-detail">Come out to the event on 10/27!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">20</div></div>
+                <div class="calendar-day"><div class="date-number">21</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">22</div>
+                    <span class="post-badge story"><span class="post-title">🏈 JV Game</span><span class="post-detail">JV takes on Allen tonight!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">23</div>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Varsity Away Game</span><span class="post-detail">Big game @ Allen! #RangerNation</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">24</div>
+                    <span class="post-badge story"><span class="post-title">🎪 St. John's Carnival</span><span class="post-detail">Highlight the team at the carnival</span></span>
+                </div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">25</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">26</div>
+                    <span class="post-badge story"><span class="post-title">💪 Full Team Practice</span><span class="post-detail">JV & Varsity working hard!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">27</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎃 Trunk or Treat</span><span class="post-detail">Jesuit Cheer at Trunk or Treat!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">28</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">29</div>
+                    <span class="post-badge story"><span class="post-title">🏈 JV Freshman Game</span><span class="post-detail">Freshman vs. McKinney tonight!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">30</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎓 SENIOR NIGHT</span><span class="post-detail">Honoring our seniors! Photos</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Varsity HOME Game</span><span class="post-detail">vs. McKinney! Announce theme</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">31</div>
+                    <span class="post-badge grid-post"><span class="post-title">👻 Halloween Recap</span><span class="post-detail">Trunk or Treat highlights!</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- NOVEMBER 2026 -->
+        <div class="month-container">
+            <div class="month-header">November 2026</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day"><div class="date-number">1</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">2</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Allison (Allie) Ueckert - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">3</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">4</div>
+                    <span class="post-badge story"><span class="post-title">🏈 JV Game</span><span class="post-detail">JV vs. Prosper Rockhill tonight!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">5</div>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Varsity Away Game</span><span class="post-detail">@ Prosper Rockhill - Announce theme</span></span>
+                    <span class="post-badge story"><span class="post-title">🏈 Game Day Highlights</span><span class="post-detail">Day in the life at away game</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">6</div></div>
+                <div class="calendar-day"><div class="date-number">7</div></div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date-number">8</div></div>
+                <div class="calendar-day"><div class="date-number">9</div></div>
+                <div class="calendar-day"><div class="date-number">10</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">11</div>
+                    <span class="post-badge story"><span class="post-title">💪 JV Practice</span><span class="post-detail">Highlight videos from Mustang</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎓 Senior Highlight</span><span class="post-detail">Dylan Hernandez (June bday)</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">12</div></div>
+                <div class="calendar-day"><div class="date-number">13</div></div>
+                <div class="calendar-day"><div class="date-number">14</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day">
+                    <div class="date-number">15</div>
+                    <span class="post-badge story"><span class="post-title">🏆 Playoff Information</span><span class="post-detail">If applicable - playoff highlights</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">16</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">17</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Molly Fellows - Story</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">18</div>
+                    <span class="post-badge story"><span class="post-title">💪 Varsity Practice</span><span class="post-detail">Highlight Varsity at Mustang</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">19</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">20</div>
+                    <span class="post-badge story"><span class="post-title">🏆 Playoff Game Posts</span><span class="post-detail">Post about playoff information</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">21</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">22</div></div>
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day"><div class="date-number">24</div></div>
+                <div class="calendar-day"><div class="date-number">25</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">26</div>
+                    <span class="post-badge grid-post"><span class="post-title">🦃 THANKSGIVING</span><span class="post-detail">Grateful for Ranger family! 🍂</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">27</div></div>
+                <div class="calendar-day"><div class="date-number">28</div></div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">29</div></div>
+                <div class="calendar-day"><div class="date-number">30</div></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- DECEMBER 2026 -->
+        <div class="month-container">
+            <div class="month-header">December 2026</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day">
+                    <div class="date-number">1</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎓 Senior Highlight</span><span class="post-detail">Siever McCullough (June bday)</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">2</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">3</div>
+                    <span class="post-badge grid-post"><span class="post-title">🏈 Football Season Recap</span><span class="post-detail">Highlight video from the season!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">4</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">5</div>
+                    <span class="post-badge story"><span class="post-title">🏀 Basketball Game</span><span class="post-detail">Announce theme & encourage attendance!</span></span>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date-number">6</div></div>
+                <div class="calendar-day"><div class="date-number">7</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">8</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Lyla Durrett - Grid post</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Mary White - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">9</div></div>
+                <div class="calendar-day"><div class="date-number">10</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">11</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎓 Senior Highlight</span><span class="post-detail">Cate OBrien (June bday)</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">12</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">13</div></div>
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">15</div>
+                    <span class="post-badge story"><span class="post-title">🎉 Coach Birthday</span><span class="post-detail">Happy Birthday Coach Kendra! 🎂</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">16</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">17</div>
+                    <span class="post-badge story"><span class="post-title">🏀 Basketball Game</span><span class="post-detail">Theme announcement & encourage attendance!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">18</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">19</div>
+                    <span class="post-badge story"><span class="post-title">🎉 Coach Birthday</span><span class="post-detail">Happy Birthday Coach Crystal! 🎂</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Kate Judson - Grid post</span></span>
+                </div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">20</div></div>
+                <div class="calendar-day"><div class="date-number">21</div></div>
+                <div class="calendar-day"><div class="date-number">22</div></div>
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day"><div class="date-number">24</div></div>
+                <div class="calendar-day"><div class="date-number">25</div></div>
+                <div class="calendar-day"><div class="date-number">26</div></div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">27</div></div>
+                <div class="calendar-day"><div class="date-number">28</div></div>
+                <div class="calendar-day"><div class="date-number">29</div></div>
+                <div class="calendar-day"><div class="date-number">30</div></div>
+                <div class="calendar-day"><div class="date-number">31</div></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- JANUARY 2027 -->
+        <div class="month-container">
+            <div class="month-header">January 2027</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day"><div class="date-number">1</div></div>
+                <div class="calendar-day"><div class="date-number">2</div></div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date-number">3</div></div>
+                <div class="calendar-day"><div class="date-number">4</div></div>
+                <div class="calendar-day"><div class="date-number">5</div></div>
+                <div class="calendar-day"><div class="date-number">6</div></div>
+                <div class="calendar-day"><div class="date-number">7</div></div>
+                <div class="calendar-day"><div class="date-number">8</div></div>
+                <div class="calendar-day"><div class="date-number">9</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day">
+                    <div class="date-number">10</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Caitlyn Russell - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">11</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">12</div>
+                    <span class="post-badge story"><span class="post-title">🏀 Basketball Game</span><span class="post-detail">Theme announcement & encourage attendance!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">13</div></div>
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day"><div class="date-number">15</div></div>
+                <div class="calendar-day"><div class="date-number">16</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">17</div></div>
+                <div class="calendar-day"><div class="date-number">18</div></div>
+                <div class="calendar-day"><div class="date-number">19</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">20</div>
+                    <span class="post-badge grid-post"><span class="post-title">📋 Tryout Information</span><span class="post-detail">Subscribe to get tryout updates!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">21</div></div>
+                <div class="calendar-day"><div class="date-number">22</div></div>
+                <div class="calendar-day"><div class="date-number">23</div></div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">24</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">25</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Royce Cooper - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">26</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">27</div>
+                    <span class="post-badge story"><span class="post-title">🏒 Hockey Senior Night</span><span class="post-detail">Encourage attendance at the event!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">28</div></div>
+                <div class="calendar-day"><div class="date-number">29</div></div>
+                <div class="calendar-day"><div class="date-number">30</div></div>
+
+                <!-- Week 6 -->
+                <div class="calendar-day"><div class="date-number">31</div></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- FEBRUARY 2027 -->
+        <div class="month-container">
+            <div class="month-header">February 2027</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day">
+                    <div class="date-number">1</div>
+                    <span class="post-badge story"><span class="post-title">🏀 Basketball Game</span><span class="post-detail">Theme announcement & encourage attendance!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">2</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">3</div>
+                    <span class="post-badge grid-post"><span class="post-title">📋 Tryout Info Session</span><span class="post-detail">Tryout dates & information!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">4</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Bridget Hambleton - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">5</div></div>
+                <div class="calendar-day"><div class="date-number">6</div></div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date-number">7</div></div>
+                <div class="calendar-day"><div class="date-number">8</div></div>
+                <div class="calendar-day"><div class="date-number">9</div></div>
+                <div class="calendar-day"><div class="date-number">10</div></div>
+                <div class="calendar-day"><div class="date-number">11</div></div>
+                <div class="calendar-day"><div class="date-number">12</div></div>
+                <div class="calendar-day"><div class="date-number">13</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day"><div class="date-number">15</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">16</div>
+                    <span class="post-badge story"><span class="post-title">📋 Tryout Information</span><span class="post-detail">Dates & information story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">17</div></div>
+                <div class="calendar-day"><div class="date-number">18</div></div>
+                <div class="calendar-day"><div class="date-number">19</div></div>
+                <div class="calendar-day"><div class="date-number">20</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">21</div></div>
+                <div class="calendar-day"><div class="date-number">22</div></div>
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">24</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Sarah Long - Story</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Emma Graham - Grid post</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">25</div>
+                    <span class="post-badge story"><span class="post-title">🎉 Coach Birthday</span><span class="post-detail">Happy Birthday Coach Brittany! 🎂</span></span>
+                    <span class="post-badge story"><span class="post-title">📋 Tryout Q&A</span><span class="post-detail">Ask us questions about tryouts!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">26</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">27</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Ali Lozano - Story</span></span>
+                </div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">28</div></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- MARCH 2027 -->
+        <div class="month-container">
+            <div class="month-header">March 2027</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day">
+                    <div class="date-number">1</div>
+                    <span class="post-badge story"><span class="post-title">📋 Info Meeting Reminder</span><span class="post-detail">Reminder for informational meeting</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">2</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Kennedy Keough - SENIOR HIGHLIGHT!!</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">3</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Sophia Pathos - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">4</div></div>
+                <div class="calendar-day"><div class="date-number">5</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">6</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Ashlyn Feeney - Story</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Mary-Michael Shuff - Grid post</span></span>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date-number">7</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">8</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Davi Garcia - Story</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">9</div>
+                    <span class="post-badge story"><span class="post-title">📋 Info Meeting Reminder</span><span class="post-detail">Informational meeting reminder</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">10</div></div>
+                <div class="calendar-day"><div class="date-number">11</div></div>
+                <div class="calendar-day"><div class="date-number">12</div></div>
+                <div class="calendar-day"><div class="date-number">13</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day"><div class="date-number">15</div></div>
+                <div class="calendar-day"><div class="date-number">16</div></div>
+                <div class="calendar-day"><div class="date-number">17</div></div>
+                <div class="calendar-day"><div class="date-number">18</div></div>
+                <div class="calendar-day"><div class="date-number">19</div></div>
+                <div class="calendar-day"><div class="date-number">20</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">21</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">22</div>
+                    <span class="post-badge story"><span class="post-title">📋 Tryout Advice</span><span class="post-detail">Tips & advice from seniors!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day"><div class="date-number">24</div></div>
+                <div class="calendar-day"><div class="date-number">25</div></div>
+                <div class="calendar-day"><div class="date-number">26</div></div>
+                <div class="calendar-day"><div class="date-number">27</div></div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day">
+                    <div class="date-number">28</div>
+                    <span class="post-badge story"><span class="post-title">📋 Tryout Clinics</span><span class="post-detail">Information on tryout clinics</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">29</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">30</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Devan McGuire - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">31</div></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- APRIL 2027 -->
+        <div class="month-container">
+            <div class="month-header">April 2027</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day"><div class="date-number">1</div></div>
+                <div class="calendar-day"><div class="date-number">2</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">3</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Emmy Dunwoody - Story</span></span>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day"><div class="date-number">4</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">5</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Isabella Johnson - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">6</div></div>
+                <div class="calendar-day"><div class="date-number">7</div></div>
+                <div class="calendar-day"><div class="date-number">8</div></div>
+                <div class="calendar-day"><div class="date-number">9</div></div>
+                <div class="calendar-day"><div class="date-number">10</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">11</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">12</div>
+                    <span class="post-badge story"><span class="post-title">📣 Team Roster</span><span class="post-detail">Announce the new team roster!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">13</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">14</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Jane Bourret - Grid post</span></span>
+                </div>
+                <div class="calendar-day">
+                    <div class="date-number">15</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Emma Angleton - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">16</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">17</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Addison Kayanan - Grid post</span></span>
+                </div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day"><div class="date-number">18</div></div>
+                <div class="calendar-day"><div class="date-number">19</div></div>
+                <div class="calendar-day"><div class="date-number">20</div></div>
+                <div class="calendar-day"><div class="date-number">21</div></div>
+                <div class="calendar-day"><div class="date-number">22</div></div>
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day"><div class="date-number">24</div></div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">25</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">26</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Emme Schwandt - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">27</div></div>
+                <div class="calendar-day"><div class="date-number">28</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">29</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Amelia Nims - Story</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">30</div></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+        <!-- MAY 2027 -->
+        <div class="month-container">
+            <div class="month-header">May 2027</div>
+            <div class="calendar">
+                <div class="day-header">Sunday</div>
+                <div class="day-header">Monday</div>
+                <div class="day-header">Tuesday</div>
+                <div class="day-header">Wednesday</div>
+                <div class="day-header">Thursday</div>
+                <div class="day-header">Friday</div>
+                <div class="day-header">Saturday</div>
+
+                <!-- Week 1 -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day">
+                    <div class="date-number">1</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Taylor Waddell - Grid post</span></span>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="calendar-day">
+                    <div class="date-number">2</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎓 Senior Colleges</span><span class="post-detail">Post seniors & where they're going!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">3</div></div>
+                <div class="calendar-day"><div class="date-number">4</div></div>
+                <div class="calendar-day"><div class="date-number">5</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">6</div>
+                    <span class="post-badge story"><span class="post-title">📣 Captain Announcement</span><span class="post-detail">Announce the new captains!</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">7</div></div>
+                <div class="calendar-day"><div class="date-number">8</div></div>
+
+                <!-- Week 3 -->
+                <div class="calendar-day"><div class="date-number">9</div></div>
+                <div class="calendar-day"><div class="date-number">10</div></div>
+                <div class="calendar-day"><div class="date-number">11</div></div>
+                <div class="calendar-day"><div class="date-number">12</div></div>
+                <div class="calendar-day"><div class="date-number">13</div></div>
+                <div class="calendar-day"><div class="date-number">14</div></div>
+                <div class="calendar-day"><div class="date-number">15</div></div>
+
+                <!-- Week 4 -->
+                <div class="calendar-day">
+                    <div class="date-number">16</div>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday/Senior</span><span class="post-detail">Lila Methvin - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">17</div></div>
+                <div class="calendar-day"><div class="date-number">18</div></div>
+                <div class="calendar-day"><div class="date-number">19</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">20</div>
+                    <span class="post-badge story"><span class="post-title">🎉 Coach Birthday</span><span class="post-detail">Happy Birthday Coach Dylan! 🎂</span></span>
+                    <span class="post-badge grid-post"><span class="post-title">🎉 Varsity Birthday</span><span class="post-detail">Hope Lamont - Grid post</span></span>
+                </div>
+                <div class="calendar-day"><div class="date-number">21</div></div>
+                <div class="calendar-day"><div class="date-number">22</div></div>
+
+                <!-- Week 5 -->
+                <div class="calendar-day"><div class="date-number">23</div></div>
+                <div class="calendar-day"><div class="date-number">24</div></div>
+                <div class="calendar-day"><div class="date-number">25</div></div>
+                <div class="calendar-day"><div class="date-number">26</div></div>
+                <div class="calendar-day"><div class="date-number">27</div></div>
+                <div class="calendar-day"><div class="date-number">28</div></div>
+                <div class="calendar-day"><div class="date-number">29</div></div>
+
+                <!-- Week 6 -->
+                <div class="calendar-day"><div class="date-number">30</div></div>
+                <div class="calendar-day">
+                    <div class="date-number">31</div>
+                    <span class="post-badge story"><span class="post-title">🎉 JV Birthday</span><span class="post-detail">Lula See - Story</span></span>
+                </div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day empty"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
