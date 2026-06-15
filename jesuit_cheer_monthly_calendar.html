@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Jesuit Cheer Social Media Calendar 2026-2027</title>
     <style>
         * {
@@ -16,6 +18,9 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            touch-action: pan-y;
         }
 
         .container {
@@ -155,6 +160,16 @@
             cursor: pointer;
         }
 
+        /* Touch-friendly tap targets */
+        @media (hover: none) and (pointer: coarse) {
+            .post-badge {
+                min-height: 44px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
         .post-title {
             font-weight: 700;
             display: block;
@@ -206,53 +221,214 @@
 
         @media (max-width: 1200px) {
             .calendar-day {
-                min-height: 100px;
+                min-height: 120px;
                 padding: 6px;
             }
 
             .post-badge {
-                font-size: 0.65em;
-                padding: 3px 6px;
+                font-size: 0.7em;
+                padding: 4px 7px;
             }
 
             .date-number {
-                font-size: 1em;
+                font-size: 1.1em;
             }
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
             .container {
-                padding: 15px;
+                padding: 20px 10px;
+                border-radius: 10px;
             }
 
             h1 {
-                font-size: 1.8em;
+                font-size: 1.6em;
+                margin-bottom: 8px;
+            }
+
+            .subtitle {
+                font-size: 0.9em;
+                margin-bottom: 20px;
+            }
+
+            .legend {
+                gap: 20px;
+                margin-bottom: 25px;
+            }
+
+            .legend-item {
+                font-size: 0.85em;
+            }
+
+            .legend-color {
+                width: 25px;
+                height: 25px;
             }
 
             .month-header {
-                font-size: 1.5em;
-                padding: 15px;
+                font-size: 1.4em;
+                padding: 12px;
+            }
+
+            .calendar {
+                gap: 0;
+            }
+
+            .day-header {
+                padding: 8px 4px;
+                font-size: 0.75em;
+                font-weight: 700;
             }
 
             .calendar-day {
-                min-height: 80px;
-                padding: 4px;
+                min-height: 110px;
+                padding: 6px 4px;
+            }
+
+            .date-number {
+                font-size: 1.1em;
+                margin-bottom: 5px;
+                font-weight: 800;
+            }
+
+            .post-badge {
+                font-size: 0.65em;
+                padding: 4px 6px;
+                margin-bottom: 4px;
+                line-height: 1.3;
+            }
+
+            .post-title {
+                margin-bottom: 1px;
+            }
+
+            .post-detail {
+                font-size: 0.85em;
+            }
+        }
+
+        /* Extra small phones */
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+
+            .container {
+                padding: 15px 8px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+                line-height: 1.2;
+            }
+
+            .subtitle {
+                font-size: 0.8em;
+            }
+
+            .legend {
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+
+            .legend-item {
+                font-size: 0.9em;
+            }
+
+            .month-header {
+                font-size: 1.2em;
+                padding: 10px;
+            }
+
+            .day-header {
+                padding: 6px 2px;
+                font-size: 0.7em;
+            }
+
+            .calendar-day {
+                min-height: 100px;
+                padding: 5px 3px;
+                border-right: 1px solid #e0e0e0;
+            }
+
+            .date-number {
+                font-size: 1em;
+                margin-bottom: 4px;
             }
 
             .post-badge {
                 font-size: 0.6em;
-                padding: 2px 4px;
-                margin-bottom: 2px;
+                padding: 3px 5px;
+                margin-bottom: 3px;
+                border-radius: 4px;
             }
 
-            .date-number {
-                font-size: 0.9em;
-                margin-bottom: 4px;
+            .post-title {
+                display: block;
+                margin-bottom: 1px;
+                line-height: 1.2;
             }
 
-            .day-header {
-                padding: 10px 5px;
+            .post-detail {
                 font-size: 0.9em;
+                line-height: 1.2;
+            }
+        }
+
+        /* Landscape phones */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .calendar-day {
+                min-height: 90px;
+            }
+        }
+
+        /* Mobile month navigation */
+        .month-nav {
+            display: none;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .month-nav-inner {
+            display: flex;
+            gap: 8px;
+            min-width: min-content;
+        }
+
+        .month-link {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85em;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+
+        .month-link:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 768px) {
+            .month-nav {
+                display: block;
             }
         }
     </style>
@@ -273,8 +449,26 @@
             </div>
         </div>
 
+        <!-- Mobile Month Navigation -->
+        <div class="month-nav">
+            <div class="month-nav-inner">
+                <a href="#june" class="month-link">Jun</a>
+                <a href="#july" class="month-link">Jul</a>
+                <a href="#aug" class="month-link">Aug</a>
+                <a href="#sep" class="month-link">Sep</a>
+                <a href="#oct" class="month-link">Oct</a>
+                <a href="#nov" class="month-link">Nov</a>
+                <a href="#dec" class="month-link">Dec</a>
+                <a href="#jan" class="month-link">Jan</a>
+                <a href="#feb" class="month-link">Feb</a>
+                <a href="#mar" class="month-link">Mar</a>
+                <a href="#apr" class="month-link">Apr</a>
+                <a href="#may" class="month-link">May</a>
+            </div>
+        </div>
+
         <!-- JUNE 2026 -->
-        <div class="month-container">
+        <div class="month-container" id="june">
             <div class="month-header">June 2026</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -341,7 +535,7 @@
         </div>
 
         <!-- JULY 2026 -->
-        <div class="month-container">
+        <div class="month-container" id="july">
             <div class="month-header">July 2026</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -418,7 +612,7 @@
         </div>
 
         <!-- AUGUST 2026 -->
-        <div class="month-container">
+        <div class="month-container" id="aug">
             <div class="month-header">August 2026</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -542,7 +736,7 @@
         </div>
 
         <!-- SEPTEMBER 2026 -->
-        <div class="month-container">
+        <div class="month-container" id="sep">
             <div class="month-header">September 2026</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -657,7 +851,7 @@
         </div>
 
         <!-- OCTOBER 2026 -->
-        <div class="month-container">
+        <div class="month-container" id="oct">
             <div class="month-header">October 2026</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -763,7 +957,7 @@
         </div>
 
         <!-- NOVEMBER 2026 -->
-        <div class="month-container">
+        <div class="month-container" id="nov">
             <div class="month-header">November 2026</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -851,7 +1045,7 @@
         </div>
 
         <!-- DECEMBER 2026 -->
-        <div class="month-container">
+        <div class="month-container" id="dec">
             <div class="month-header">December 2026</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -936,7 +1130,7 @@
         </div>
 
         <!-- JANUARY 2027 -->
-        <div class="month-container">
+        <div class="month-container" id="jan">
             <div class="month-header">January 2027</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -1019,7 +1213,7 @@
         </div>
 
         <!-- FEBRUARY 2027 -->
-        <div class="month-container">
+        <div class="month-container" id="feb">
             <div class="month-header">February 2027</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -1101,7 +1295,7 @@
         </div>
 
         <!-- MARCH 2027 -->
-        <div class="month-container">
+        <div class="month-container" id="mar">
             <div class="month-header">March 2027</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -1188,7 +1382,7 @@
         </div>
 
         <!-- APRIL 2027 -->
-        <div class="month-container">
+        <div class="month-container" id="apr">
             <div class="month-header">April 2027</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
@@ -1271,7 +1465,7 @@
         </div>
 
         <!-- MAY 2027 -->
-        <div class="month-container">
+        <div class="month-container" id="may">
             <div class="month-header">May 2027</div>
             <div class="calendar">
                 <div class="day-header">Sunday</div>
