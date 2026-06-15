@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesuit Cheer Social Media Calendar 2026-2027</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .grid-post-color {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .story-color {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .month-section {
+            margin-bottom: 50px;
+        }
+
+        .month-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .day-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .day-header {
+            font-weight: 700;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .day-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+
+        .post-item {
+            margin-bottom: 12px;
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .post-item:hover {
+            transform: scale(1.02);
+        }
+
+        .post-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .grid-post {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .story {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .post-type {
+            font-weight: 700;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            opacity: 0.9;
+        }
+
+        .event-name {
+            font-weight: 600;
+            font-size: 1.05em;
+            margin-bottom: 6px;
+        }
+
+        .category {
+            font-size: 0.85em;
+            opacity: 0.85;
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+
+        .content {
+            font-size: 0.9em;
+            line-height: 1.4;
+            opacity: 0.9;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .calendar-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stats {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 12px;
+            color: white;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Jesuit Cheer Social Media Calendar</h1>
+        <div class="subtitle">2026-2027 Season | Instagram Content Plan</div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color grid-post-color"></div>
+                <span>Grid Post (Feed)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color story-color"></div>
+                <span>Story</span>
+            </div>
+        </div>
+
+        <!-- JUNE 2026 -->
+        <div class="month-section">
+            <div class="month-header">📅 June 2026</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">6/9</span> Tuesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Dylan Hernandez Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Dylan! #JesuitCheer #RangerNation</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Siever McCullough Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Siever! #JesuitCheer #RangerNation</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Meredith Garcia Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Meredith! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">6/24</span> Wednesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Cate OBrien Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Cate! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JULY 2026 -->
+        <div class="month-section">
+            <div class="month-header">📅 July 2026</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">7/13</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Catherine LeClair Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Catherine! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">7/25</span> Saturday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Ireland Burnett Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Ireland! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">7/26</span> Sunday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Sofia Bailey Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Sofia! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">7/29</span> Wednesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Team Photos</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Team Photo Day! Share team photos, behind the scenes content</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">7/30</span> Thursday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Jesuit Cheer Camp - NCA Camp Kickoff</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">NCA Camp kicks off today! Follow along for updates. #NCA #CheerCamp</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">7/31</span> Friday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Jesuit Cheer Camp - Day 2</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Camp Day 2 highlights and activities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AUGUST 2026 -->
+        <div class="month-section">
+            <div class="month-header">📅 August 2026</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/1</span> Saturday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Jesuit Cheer Camp - Day 3</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Camp Day 3 highlights and activities</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/2</span> Sunday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">All American Tryouts</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">All American Tryouts today! Wishing our athletes the best of luck! #AllAmerican #NCA</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">All American Tryouts</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Announce the All American Winners with highlights.</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/7</span> Friday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Rachel Courie Birthday</div>
+                        <div class="category">Coach Birthday</div>
+                        <div class="content">Happy Birthday Coach Rachel! 🎂</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/10</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Camila Burlingame Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Camila! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/13</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">New Parent Welcome</div>
+                        <div class="category">Jesuit School Event</div>
+                        <div class="content">Welcome to all our new Jesuit families! Reminder to buy your Homecoming T-shirts #RangerNation</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Kate Kruse Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Kate! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/15</span> Saturday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Homecoming T-shirt Sales Reminder</div>
+                        <div class="category">Event</div>
+                        <div class="content">Homecoming t-shirts are NOW AVAILABLE! Link in bio to order. Sales close 9/11.</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/17</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Freshman Orientation</div>
+                        <div class="category">Jesuit School Event</div>
+                        <div class="content">Welcome Freshman Rangers!</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/19</span> Wednesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">First Day of School</div>
+                        <div class="category">Jesuit School Event</div>
+                        <div class="content">First day of school! Let's make this year great! #BackToSchool #JesuitRangers</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/20</span> Thursday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Jesuit Football Scrimmage</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Rangers are ready! First scrimmage today. #RangerNation</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Homecoming Mum Sales Open</div>
+                        <div class="category">Jesuit School Event</div>
+                        <div class="content">Mum sales are now open! Don't forget to buy your homecoming t-shirts</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/22</span> Saturday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Corinne Rodill Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Corinne! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/25</span> Tuesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Football Banner Painting</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Banner painting in progress! #GameDay prep</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/26</span> Wednesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Reminder to buy Homecoming Shirts</div>
+                        <div class="category">Homecoming Shirts</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/27</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Football Game vs. Sachse</div>
+                        <div class="category">JV Game</div>
+                        <div class="content">JV takes on Sachse tonight! Come support! 🏈 #GoRangers</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">8/28</span> Friday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Varsity Away Game @ Sachse</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">Varsity hits the road! Away game at Sachse tonight! Show the theme</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEPTEMBER 2026 -->
+        <div class="month-section">
+            <div class="month-header">📅 September 2026</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/1</span> Tuesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Reminder to buy Homecoming Shirts</div>
+                        <div class="category">Homecoming Shirts</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/3</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Football Game vs. Rockwall</div>
+                        <div class="category">JV Game</div>
+                        <div class="content">JV game tonight vs. Rockwall! Let's go Rangers! 🏈</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/4</span> Friday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Little Rowdy Rangers: Friday Night Lights</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Little Rowdy Rangers performance tonight! #FridayNightLights</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Varsity Home Game vs. Rockwall</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">HOME GAME! Varsity vs. Rockwall tonight! Announce the theme.</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Ellie Wilson Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Ellie! 🎉 #JesuitCheer</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Piper Blanton Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Piper! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/6</span> Sunday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Stella McAllister Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Stella! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/8</span> Tuesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Emma Slovak Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Emma! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/10</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Freshman Game vs. Forney</div>
+                        <div class="category">JV Game</div>
+                        <div class="content">Freshman team takes the field vs. Forney! 🏈 #GoRangers</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/11</span> Friday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Homecoming T-shirt Sales Close</div>
+                        <div class="category">Homecoming Shirts</div>
+                        <div class="content">LAST CHANCE! Homecoming t-shirt sales close TODAY!</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Varsity Home Game vs. Forney</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">HOME GAME! Varsity vs. Forney! 🏈 #RangerPride</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/17</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Football Game vs. Princeton</div>
+                        <div class="category">JV Game</div>
+                        <div class="content">JV faces Princeton tonight! 🏈 #GoRangers</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/18</span> Friday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Varsity Away Game @ Princeton</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">Road game! Varsity at Princeton! 🏈 #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/25</span> Friday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Ranger Day/Homecoming</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">HOMECOMING DAY! Ranger Day performance + Homecoming game vs. McKinney Boyd! 🏈👑 #HOCO2026</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Ranger Day - Cheerleaders Arrive</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Cheerleaders arriving for Ranger Day! Follow along for the day!</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Ranger Day Practice</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Final Ranger Day practice before the big performance!</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Ranger Day Performance</div>
+                        <div class="category">Full Team Event</div>
+                        <div class="content">Ranger Day Performance! (Parents Welcome) - Share performance clips</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Homecoming Game updates</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">Stories through the night on the game, cheer performance, etc.</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">9/29</span> Tuesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Caroline Klasing Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Caroline! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OCTOBER 2026 -->
+        <div class="month-section">
+            <div class="month-header">📅 October 2026</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/6</span> Tuesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Georgia Fossez Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Georgia! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/7</span> Wednesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Football Game vs. Walnut Grove</div>
+                        <div class="category">JV Game</div>
+                        <div class="content">JV vs. Walnut Grove tonight! 🏈 #GoRangers</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/8</span> Thursday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Varsity Away Game @ Walnut Grove</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">Varsity on the road at Walnut Grove! 🏈 #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/13</span> Tuesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Yvette Williams Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Yvette! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/15</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Freshman Game vs. Prosper</div>
+                        <div class="category">JV Game</div>
+                        <div class="content">Freshman team vs. Prosper! 🏈 #GoRangers</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Giada Cervin Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Giada! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/16</span> Friday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Varsity Home Game vs. Prosper</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">HOME GAME! Varsity vs. Prosper! Announce the theme</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/19</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Trunk or Treat Information</div>
+                        <div class="category">Trunk or Treat</div>
+                        <div class="content">Come out to the Jesuit Trunk or Treat event</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/22</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Football Game vs. Allen</div>
+                        <div class="category">JV Game</div>
+                        <div class="content">JV takes on Allen tonight! 🏈 #GoRangers</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/23</span> Friday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Varsity Away Game @ Allen</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">Big away game at Allen! 🏈 #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/24</span> Saturday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">St. John's School Carnival</div>
+                        <div class="category">Community Event</div>
+                        <div class="content">Highlight the team at the St. John's School Carnival</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/26</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Full Team Practice</div>
+                        <div class="category">Full Team Practice</div>
+                        <div class="content">JV & Varsity team practice - the team is hard at work leading up to the games</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/27</span> Tuesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post or Story</div>
+                        <div class="event-name">Trunk or Treat</div>
+                        <div class="category">Team Event</div>
+                        <div class="content">Jesuit Cheer at Trunk or Treat! Could be a story</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/29</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Freshman Game vs. McKinney</div>
+                        <div class="category">JV Game</div>
+                        <div class="content">Freshman team vs. McKinney! 🏈 #GoRangers</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/30</span> Friday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Post picture of the seniors from Senior Night</div>
+                        <div class="category">Senior Night</div>
+                        <div class="content">Pending date</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Varsity Home Game vs. McKinney</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">HOME GAME! Varsity vs. McKinney! Announce the theme</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">10/31</span> Saturday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post or Story</div>
+                        <div class="event-name">Trunk or Treat Recap</div>
+                        <div class="category">Team Event</div>
+                        <div class="content">Happy Halloweek from Jesuit Cheer - highlight the Trunk or Treat</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NOVEMBER 2026 -->
+        <div class="month-section">
+            <div class="month-header">📅 November 2026</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">11/2</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Allison (Allie) Ueckert Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Allie! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">11/4</span> Wednesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Football Game vs. Prosper Rockhill</div>
+                        <div class="category">JV Game</div>
+                        <div class="content">JV vs. Prosper Rockhill! 🏈 #GoRangers</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">11/5</span> Thursday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Varsity Away Game @ Prosper Rockhill</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">Varsity away at Prosper Rockhill Announce the theme.</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Varsity Away Game @ Prosper Rockhill</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">Add some game highlights</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">11/11</span> Wednesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">JV Practice - Mustang</div>
+                        <div class="category">JV Practice</div>
+                        <div class="content">Highlight some practice videos from Mustang</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Dylan Hernandez (June Bday)</div>
+                        <div class="category">Senior Highlight</div>
+                        <div class="content">Happy Birthday Dylan! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">11/17</span> Tuesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Molly Fellows Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Molly! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">11/18</span> Wednesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Varsity Practice - Mustang</div>
+                        <div class="category">Varsity Practice</div>
+                        <div class="content">Highlight Varsity practice at mustang</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">11/20</span> Friday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story or Grid</div>
+                        <div class="event-name">Playoff Game Posts</div>
+                        <div class="category">Varsity Game</div>
+                        <div class="content">Post about playoff information</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">11/26</span> Thursday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Thanksgiving</div>
+                        <div class="category">Holiday</div>
+                        <div class="content">Happy Thanksgiving from Jesuit Cheer! 🦃🍂 Grateful for our Ranger family! #Thanksgiving</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DECEMBER 2026 -->
+        <div class="month-section">
+            <div class="month-header">📅 December 2026</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">12/1</span> Tuesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Siever McCullough (June Bday)</div>
+                        <div class="category">Senior Highlight</div>
+                        <div class="content">Happy Birthday Siever! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">12/3</span> Thursday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid</div>
+                        <div class="event-name">Football Game Recap Video</div>
+                        <div class="category">Varsity Football</div>
+                        <div class="content">Put together highlights from the Season</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">12/8</span> Tuesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Mary White Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Mary! #JesuitCheer #RangerNation</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Lyla Durrett Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Lyla! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">12/9</span> Wednesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Varsity Practice</div>
+                        <div class="category">Varsity Practice</div>
+                        <div class="content">Highlight reel of practice and games on the Varsity team</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">12/11</span> Friday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Cate OBrien Birthday (June Bday)</div>
+                        <div class="category">Senior Highlight</div>
+                        <div class="content">Happy Birthday Cate! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">12/15</span> Tuesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Kendra Sawyer Birthday</div>
+                        <div class="category">Coach Birthday</div>
+                        <div class="content">Happy Birthday Coach Kendra! 🎂</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">12/19</span> Saturday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Crystal Joschko Birthday</div>
+                        <div class="category">Coach Birthday</div>
+                        <div class="content">Happy Birthday Coach Crystal! 🎂</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Kate Judson Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Kate! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JANUARY 2027 -->
+        <div class="month-section">
+            <div class="month-header">📅 January 2027</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">1/10</span> Sunday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Caitlyn Russell Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Caitlyn! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">1/25</span> Monday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Royce Cooper Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Royce! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FEBRUARY 2027 -->
+        <div class="month-section">
+            <div class="month-header">📅 February 2027</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">2/4</span> Thursday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Bridget Hambleton Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Bridget! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">2/9</span> Tuesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Tryout dates & Information</div>
+                        <div class="category">Tryouts Information</div>
+                        <div class="content">Information on tryouts</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">2/17</span> Wednesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Tryout dates & Information</div>
+                        <div class="category">Tryouts Information</div>
+                        <div class="content">Information on tryouts</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">2/22</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Tryout dates & Information</div>
+                        <div class="category">Tryouts Information</div>
+                        <div class="content">Interest meeting reminder (can be adjusted based on dates)</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">2/24</span> Wednesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Emma Graham Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Emma! #JesuitCheer #RangerNation</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Sarah Long Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Sarah! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">2/25</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Brittany Frey Birthday</div>
+                        <div class="category">Coach Birthday</div>
+                        <div class="content">Happy Birthday Coach Brittany! 🎂</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">2/27</span> Saturday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Ali Lozano Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Ali! 🎉</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MARCH 2027 -->
+        <div class="month-section">
+            <div class="month-header">📅 March 2027</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">3/1</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Tryout dates & Information</div>
+                        <div class="category">Tryouts Information</div>
+                        <div class="content">Information on tryouts / interest meeting information</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">3/2</span> Tuesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Kennedy Keough Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Kennedy! SENIOR HIGHLIGHT!!</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">3/3</span> Wednesday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Sophia Pathos Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Sophia! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">3/6</span> Saturday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Mary-Michael Shuff Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Mary-Michael! #JesuitCheer #RangerNation</div>
+                    </div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Ashlyn Feeney Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Ashlyn! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">3/8</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Davi Garcia Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Davi! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">3/15</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Tryout dates & Information</div>
+                        <div class="category">Tryouts Information</div>
+                        <div class="content">Information on tryouts</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">3/22</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Tryout dates & Information</div>
+                        <div class="category">Tryouts Information</div>
+                        <div class="content">Information on tryouts / tryout advice from seniors</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">3/28</span> Sunday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Tryout clinics?</div>
+                        <div class="category">Tryouts Information</div>
+                        <div class="content">Any information on Tryouts Clinics being held</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">3/30</span> Tuesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Devan McGuire Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Devan! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- APRIL 2027 -->
+        <div class="month-section">
+            <div class="month-header">📅 April 2027</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">4/3</span> Saturday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Emmy Dunwoody Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Emmy! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">4/5</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Isabella Johnson Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Isabella! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">4/12</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Pending Date - post the team roster</div>
+                        <div class="category">Team Announcement</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">4/14</span> Wednesday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Jane Bourret Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Jane! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">4/15</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Emma Angleton Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Emma! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">4/17</span> Saturday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Addison Kayanan Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Addison! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">4/26</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Emme Schwandt Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Emme! 🎉</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">4/29</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Amelia Nims Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Amelia! 🎉</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAY 2027 -->
+        <div class="month-section">
+            <div class="month-header">📅 May 2027</div>
+            <div class="calendar-grid">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">5/1</span> Saturday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Taylor Waddell Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Taylor! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">5/2</span> Sunday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Post through the month of Senior Colleges</div>
+                        <div class="category">Senior Colleges</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">5/6</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Pending Date post the captains</div>
+                        <div class="category">Captain Announcement</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">5/16</span> Sunday</div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Lila Methvin Birthday</div>
+                        <div class="category">Varsity Birthday / Senior Highlight</div>
+                        <div class="content">Happy Birthday Lila! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">5/20</span> Thursday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Dylan Tran Birthday</div>
+                        <div class="category">Coach Birthday</div>
+                        <div class="content">Happy Birthday Coach Dylan! 🎂</div>
+                    </div>
+                    <div class="post-item grid-post">
+                        <div class="post-type">Grid Post</div>
+                        <div class="event-name">Hope Lamont Birthday</div>
+                        <div class="category">Varsity Birthday</div>
+                        <div class="content">Happy Birthday Hope! #JesuitCheer #RangerNation</div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-number">5/31</span> Monday</div>
+                    <div class="post-item story">
+                        <div class="post-type">Story</div>
+                        <div class="event-name">Lula See Birthday</div>
+                        <div class="category">JV Birthday</div>
+                        <div class="content">Happy Birthday Lula!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
